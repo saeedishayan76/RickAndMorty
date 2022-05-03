@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RickMovie</string>
+    <string name="species">Species</string>
+    <string name="gender">Gender</string>
+    <string name="rick_and_morty">Rick And Morty</string>
+    <string name="search">Search</string>
+</resources>

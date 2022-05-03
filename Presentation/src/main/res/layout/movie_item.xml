@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/gray"
+    app:cardCornerRadius="12dp"
+    android:layout_marginTop="@dimen/dp8"
+    android:layout_height="150dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_movie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@id/guide_img"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_name_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/guide_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="dakhsdhjsdhsd" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_status_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:lines="1"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/tv_name_movie"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_movie"
+            tools:text="ss" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide_mid"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_marginStart="@dimen/dp8"
+            android:lines="1"
+            android:id="@+id/tv_specials"
+            android:text="Special"
+            android:textColor="#C7A3A1A1"
+            app:layout_constraintStart_toEndOf="@id/guide_img"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_specials"
+            android:layout_marginTop="@dimen/dp4"
+            android:id="@+id/tv_species_data"
+            android:layout_marginStart="@dimen/dp8"
+            android:lines="1"
+            android:text="@string/species"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/guide_img"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/base_margin"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="#C7A3A1A1"
+            android:text="@string/gender"
+            android:id="@+id/tv_gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_specials"
+            app:layout_constraintStart_toEndOf="@id/tv_specials"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_gender_data"
+            android:layout_marginTop="@dimen/dp4"
+            app:layout_constraintStart_toStartOf="@id/tv_gender"
+            app:layout_constraintEnd_toEndOf="@id/tv_gender"
+            android:layout_height="wrap_content"
+            tools:text="Male"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tv_gender"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/guide_mid"
+            app:layout_constraintGuide_percent="0.5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

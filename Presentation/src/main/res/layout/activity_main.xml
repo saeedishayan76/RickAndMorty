@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/rick_and_morty"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_movie"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/appBar" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/input_ed"
+        android:layout_margin="@dimen/base_margin"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:boxCornerRadiusBottomStart="@dimen/dp8"
+        app:boxCornerRadiusTopEnd="@dimen/dp8"
+        app:boxCornerRadiusBottomEnd="@dimen/dp8"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:boxCornerRadiusTopStart="@dimen/dp8"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/gray"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_baseline_search_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="56dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/ed_search_name"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:hint="@string/search"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_movies"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_ed" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_margin="@dimen/base_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_ed"
+        android:id="@+id/rec_search"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
